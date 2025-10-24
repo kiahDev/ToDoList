@@ -23,6 +23,10 @@ addtask.addEventListener('click', function() {
             newD.remove();
         })
 
+        newP.style.maxWidth = '200px';
+        newP.style.overflow = 'hidden';
+        newP.style.textOverflow = 'ellipsis'
+
         newD.style.display = 'flex';
         newD.style.justifyContent = 'space-between';
         newD.style.alignItems = 'center';
