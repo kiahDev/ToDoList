@@ -40,6 +40,7 @@ addTask.addEventListener('click', function() {
             
             if (newCheckbox.checked) {
                 newP.style.textDecoration = 'line-through';
+                newP.style.textDecorationColor = 'red';
                 newP.style.color = 'black';
 
             } else {
