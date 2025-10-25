@@ -25,11 +25,11 @@ addTask.addEventListener('click', function() {
         inputTask.value = '';
 
         newD.style.display = 'flex';
-        newD.style.gap = '15px';
+        newD.style.justifyContent = 'space-between';
         newD.style.alignItems = 'center';
+        newD.style.width = '100%';
 
-        newDelBtn.style.marginLeft = '130px'
-
+        newP.style.flex = '1';
         newP.style.maxWidth = '200px';
         newP.style.textOverflow = 'ellipsis';
         newP.style.overflow = 'hidden';
