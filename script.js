@@ -4,7 +4,7 @@ const addTask = document.querySelector('.enter');
 
 addTask.addEventListener('click', function() {
 
-    if (inputTask.value === '') {
+    if (inputTask.value.trim() === '') {
         alert('Enter a task first.');
     } else {
 
