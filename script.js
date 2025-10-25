@@ -44,6 +44,12 @@ addTask.addEventListener('click', function() {
                 newP.style.textDecoration = 'none';
             }
 
+        });
+
+        newDelBtn.addEventListener('click', function() {
+
+            newD.remove();
+
         })
     }
 });
