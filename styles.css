@@ -59,6 +59,7 @@ body {
 input {
     padding: 12px;
     border: none;
+    transition: 0.3s;
 }
 
 .input-task button {

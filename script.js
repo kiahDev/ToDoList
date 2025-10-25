@@ -1,35 +1,48 @@
-const addtask = document.querySelector('.enter');
-const task = document.querySelector('.task');
-const input = document.querySelector('.input');
+const taskContainer = document.querySelector('.task');
+const inputTask = document.querySelector('.input');
+const addTask = document.querySelector('.enter');
 
-addtask.addEventListener('click', function() {
-    if (input.value === '') {
-        alert('Enter a task first');
+addTask.addEventListener('click', function() {
+
+    if (inputTask.value === '') {
+        alert('Enter a task first.');
     } else {
+
+        let newD = document.createElement('div');
+        let newP = document.createElement('p');
+        let newDelBtn = document.createElement('button');
+        let newCheckbox = document.createElement('input');
         
-        const newD = document.createElement('div');
-        const newP = document.createElement('p');
-        const delbtn = document.createElement('button');
+        newCheckbox.type = 'checkbox';
 
-        delbtn.textContent = 'Delete';
+        newDelBtn.textContent = 'Delete';
+        newP.textContent = inputTask.value;
 
-        newP.textContent = input.value;
-        newD.append(newP, delbtn);
+        newD.append(newCheckbox ,newP, newDelBtn);
 
-        task.append(newD);
-        input.value = '';
+        taskContainer.appendChild(newD);
 
-        delbtn.addEventListener('click', function() {
-            newD.remove();
-        })
-
-        newP.style.maxWidth = '200px';
-        newP.style.overflow = 'hidden';
-        newP.style.textOverflow = 'ellipsis'
+        inputTask.value = '';
 
         newD.style.display = 'flex';
-        newD.style.justifyContent = 'space-between';
+        newD.style.gap = '15px';
         newD.style.alignItems = 'center';
 
+        newDelBtn.style.marginLeft = '130px'
+
+        newP.style.maxWidth = '200px';
+        newP.style.textOverflow = 'ellipsis';
+        newP.style.overflow = 'hidden';
+        newP.style.whiteSpace = 'nowrap';
+
+        newCheckbox.addEventListener('change', function() {
+            
+            if (newCheckbox.checked) {
+                newP.style.textDecoration = 'line-through';
+            } else {
+                newP.style.textDecoration = 'none';
+            }
+
+        })
     }
 });
