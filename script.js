@@ -6,6 +6,7 @@ addTask.addEventListener('click', function() {
 
     if (inputTask.value.trim() === '') {
         alert('Enter a task first.');
+        inputTask.value = '';
     } else {
 
         let newD = document.createElement('div');
